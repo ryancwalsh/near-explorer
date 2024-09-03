@@ -109,12 +109,12 @@ jobs:
       - uses: ./.github/actions/install-packages
       - uses: ./.github/actions/install-cypress
       - name: Download frontend dist
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: frontend-dist
           path: frontend/.next/
       - name: Download backend dist
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: backend-dist
           path: backend/build/
@@ -147,12 +147,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Download base stats
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: base-stats
           path: stats/base
       - name: Download PR stats
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: pr-stats
           path: stats/pr
